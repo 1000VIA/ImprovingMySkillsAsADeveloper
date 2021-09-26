@@ -1,1 +1,4 @@
-console.log("prueba");
+/**
+ * Los métodos call y apply de las funciones en JavaScript
+ */
+;
