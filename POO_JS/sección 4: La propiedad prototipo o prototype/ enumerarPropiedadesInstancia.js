@@ -1,5 +1,14 @@
 /**
- * ¿Qué es la herencia en Programación orientada a objetos?
+ * Enumerar las propiedades de una instancia.
+ * Visualizar el contenido del prototipo
+ * Por medio de un ciclo for ...in podemos enlistar todas 
+ * las propiedades de un objeto.
+ * Por medio de la función hasOwnProperty()
+ * sabemos si son propiedades del objeto (tru) o 
+ * del objeto prototype (false).
+ * Para si una variable es enumerable
+ * (visible en el for ...in) utilizamos el método
+ * propertyIsEnumerable()
  */
 
 

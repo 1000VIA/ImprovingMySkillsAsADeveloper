@@ -1,5 +1,10 @@
 /**
- * ¿Qué es la herencia en Programación orientada a objetos?
+ * Sobreescribir una propiedad prototipo
+ * Sobreescribir propiedades e la función.
+ * Para que sepamos si la propiedad es de la función
+ * o del prototipo, tenemos el método hasOwnProperty().
+ * Si borramos una propiedad de la función, javascript nos regresará 
+ * la propiedad del prototipo.
  */
 
 
@@ -36,12 +41,17 @@ Libro.prototype = {
 let libro1 = new Libro("El Quijote de la Mancha", "Miguel", "de Cervantes", 600);
 let libro2 = new Libro("Cien años de soledad", "Gabriel", "Garcíama", 800);
 
-for( let prop in libro1){
-    if(!libro1.hasOwnProperty(prop))
-    console.log(prop+" = "+libro1[prop]);
-}
+// Desplegar las propiedades
+document.write('<br> El libro 1 cuesta: ',libro1.precio);
+document.write('<br> Existe en la función? => ',libro1.hasOwnProperty("precio"));
+document.write('<br> La calificación es: ',libro1.calificacion);
+document.write('<br> Existe en la función? => ',libro1.hasOwnProperty("calificacion"));
 
+//Eliminamos 
+delete libro1.calificacion;
 
-document.write(libro1.propertyIsEnumerable("precio"));//Retorna falso porque precio se encuentra en el prototipo y no en la función
-document.write('<br> ',libro1.propertyIsEnumerable("calificacion")); // tru porque está en la función
-document.write('<br> ',libro1.propertyIsEnumerable("constructor")); //false => contructor no es enumerable
+//Desplegamos
+document.write('<br> La calificación es: ',libro1.calificacion);
+
+//Preguntamos
+document.write('<br> Existe en la función? => ',libro1.hasOwnProperty("calificacion"));
