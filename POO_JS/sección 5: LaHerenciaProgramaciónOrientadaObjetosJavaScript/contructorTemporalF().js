@@ -1,21 +1,10 @@
 /**
- * Sumario de modos de herencia en JavaScript
- * - Herencias por medio del contructor
- * - Herencia por medio de objetos
- * - usar propiedades
- * - copiar prototipos
- * - ambos
- * - Prototype chainig (pseudo-classical)
- * - Inherito only the prototype.
- * - Temporary constructor.
- * - Copying the prototype prototies.
- * - copy all properties (shallow copy)
- * - Deep copy
- * - Prototypepal inheritance
- * - Extend and augment
- * - Multiple inherritance
- * - Borrowing constructors
- * - Borrow a constructor and copy the prototipe
+ * El contructor temporal F() 
+ * Heredar en JavaScript por medio de un constructor temporal
+ * Una forma de solucionar el problema anterior 
+ * es crear un constructor temporal.
+ * Con el constructor temporal se rompe la cadena de prototipos,
+ * pero se heredan los elementos entre las clases.
  */
 
 function enumera(objeto){

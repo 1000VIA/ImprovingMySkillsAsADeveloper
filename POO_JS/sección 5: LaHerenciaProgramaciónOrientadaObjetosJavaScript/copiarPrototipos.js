@@ -1,21 +1,11 @@
 /**
- * Sumario de modos de herencia en JavaScript
- * - Herencias por medio del contructor
- * - Herencia por medio de objetos
- * - usar propiedades
- * - copiar prototipos
- * - ambos
- * - Prototype chainig (pseudo-classical)
- * - Inherito only the prototype.
- * - Temporary constructor.
- * - Copying the prototype prototies.
- * - copy all properties (shallow copy)
- * - Deep copy
- * - Prototypepal inheritance
- * - Extend and augment
- * - Multiple inherritance
- * - Borrowing constructors
- * - Borrow a constructor and copy the prototipe
+ *  Herencia: copiar sólo los prototipos
+ * Los elementos que se comparten se almacenan en el prototipo.
+ * Por esta razón, muchas veces sólo se hereda el prototype, 
+ * que es donde se debe almacenar los elementos reutilizables.
+ * Lo cual es más eficiente, pero las modificaciones 
+ * son més complicadas, ya que modifican a todas las instancias
+ * de toda la cadena de herencia.
  */
 
 function enumera(objeto){
@@ -36,13 +26,11 @@ Animal.prototype.toString = function(){
 }
 //
 
-function Mamifero(){};
+function Mamifero(){}
 //
 //Copiamos el prototipo
 //
-let F = function(){};
-F.prototype = Animal.prototype;
-Mamifero.prototype = new F();
+Mamifero.prototype = Animal.prototype;
 //
 Mamifero.prototype.nombre = "Mamífero";
 // 
@@ -53,10 +41,7 @@ function Gato(color, genero){
 }
 
 //Herencia
-let OtherF = function(){};
-F.prototype = Mamifero.prototype;
-Gato.prototype = new OtherF();
-//
+Gato.prototype = Mamifero.prototype;
 
 //Modificamos el prototipo
 Gato.prototype.nombre = "Gato";
@@ -66,15 +51,13 @@ Gato.prototype.saludar = function(){
 }
 
 //Instancia
+
 let benito = new Gato("miel", "angoro");
-// benito.nombre = "benito";
+benito.nombre = "benito";
 enumera(benito);
 
 //Creamos un animal
 let animal = new Animal();
+animal.nombre = "La bestia"
 enumera(animal);
-
-//Creamos una instancia para mamífero
-let mamifero = new Mamifero();
-enumera(mamifero);
 
