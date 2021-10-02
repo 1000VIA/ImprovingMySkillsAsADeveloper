@@ -1,3 +1,3 @@
 /**
- * 
+ * Programación orientada a objetos
  */
