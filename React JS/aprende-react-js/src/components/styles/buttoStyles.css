@@ -1,0 +1,13 @@
+.button-red {
+  background-color: red;
+  color: white;
+  border: 1px solid #eee;
+  border-radius: 5px;
+}
+.button-grey {
+  background-color: grey;
+  color: white;
+  border: none;
+  border: 1px solid #eee;
+  border-radius: 5px;
+}
