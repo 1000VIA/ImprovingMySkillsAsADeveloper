@@ -9,7 +9,7 @@ const Contact = (props)=> {
 
       return(
         <div>
-            <Modal onC/>
+            <Modal/>
             <div className='ui raised very padded tex container segment' style={{marginTop:'20px'}}>
                 <Link to='/dayana' className ='iu header'>Dayana</Link>
                 <p>Hija</p>
