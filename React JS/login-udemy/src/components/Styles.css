@@ -1,0 +1,49 @@
+body {
+  font-family: "Open Sans", sans-serif;
+}
+.form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 98vh;
+  background: #4776e6;
+  background: -webkit-linear-gradient(to right, #8e54e9, #4776e6);
+  background: linear-gradient(to right, #8e54e9, #4776e6);
+}
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 35%;
+  width: 50%;
+  background: white;
+}
+form h2 {
+  color: #8e54e9;
+}
+.labels {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+label {
+  width: 100%;
+  color: #4776e6;
+}
+input {
+  margin: 0 0 3%;
+  outline: none;
+  padding: 5px;
+  border: 2px solid #cccccc;
+  border-radius: 5px;
+}
+button {
+  width: 100%;
+  margin: 0 0 3%;
+  padding: 5px;
+  border: 2px solid #cccccc;
+  border-radius: 5px;
+  outline: none;
+}
