@@ -8,6 +8,8 @@
     villians.forEach(v => console.log(v));
 
     // numbers.push(11);
+    
+    numbers.forEach( v => console.log( v ) )
 
     
 

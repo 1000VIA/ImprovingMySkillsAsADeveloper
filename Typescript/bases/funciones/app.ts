@@ -1,4 +1,5 @@
-//Funciones básicas
+(()=>{
+   //Funciones básicas
 function sumar( a:number , b: number ): number{
     return a + b
 };
@@ -32,4 +33,6 @@ const noHaceNada = ( numero: number, texto: string, booleano: boolean, arreglo: 
 // Crear el tipo de función que acepte la función 'noHaceNada'
 let noHaceNadaTampoco: ( n: number, t: string, b:boolean, a: string[]) => void;
 
-noHaceNadaTampoco = noHaceNada;
+noHaceNadaTampoco = noHaceNada; 
+})();
+
