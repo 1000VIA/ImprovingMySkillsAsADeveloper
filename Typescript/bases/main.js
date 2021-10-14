@@ -1,103 +1,86 @@
 "use strict";
 (() => {
-    class Mutante {
-        constructor(name, realName) {
-            this.name = name;
-            this.realName = realName;
-        }
-    }
-    class Xmen extends Mutante {
-        salvarMundo() {
-            return 'Mundo a salvo!';
-        }
-    }
-    class villian extends Mutante {
-        conquietarMundo() {
-            return 'Mundo conquistado';
-        }
-    }
-    const wolverine = new Xmen('Wolverine', 'Logan');
-    const magneto = new villian('Magneto', 'Magnus');
-    const printName = (charater) => console.log(charater.realName);
-})();
-(() => {
-    class Avenger {
-        constructor(name, team, realName) {
-            this.name = name;
-            this.team = team;
-            this.realName = realName;
-        }
-    }
-    Avenger.aveAge = 35;
-    const antman = new Avenger('Antman', 'Capotan');
-})();
-(() => {
-    class Avenger {
-        constructor(name, realName) {
-            this.name = name;
-            this.realName = realName;
-            console.log('Constructor Avenger llamado!');
-        }
-        getFullName() {
-            return `${this.name} ${this.realName}`;
-        }
-    }
-    class Xmen extends Avenger {
-        constructor(name, realName, isMutant) {
-            super(name, realName);
-            this.isMutant = isMutant;
-            console.log('Constructor Xmen llamado');
-        }
-        get fullName() {
-            return `${this.name} - ${this.realName}`;
-        }
-        set fullName(name) {
-            if (name.length < 3) {
-                throw new Error('El nombre debe se ser mayor de 3 letras');
-            }
-            this.name = name;
-        }
-        getFullNameDesdeXmen() {
-            console.log(super.getFullName());
-        }
-    }
-})();
-(() => {
-    class Avenger {
-        constructor(name, team, realName) {
-            this.name = name;
-            this.team = team;
-            this.realName = realName;
-        }
-        static getAveAge() {
+    let flash = {
+        name: 'Barry Allen',
+        age: 24,
+        powers: ['Súper velocidad', 'Viajar en el tiempo']
+    };
+    let superman = {
+        name: 'Clark ken',
+        age: 60,
+        powers: ['Súper velocidad'],
+        getName() {
             return this.name;
         }
-        bio() {
-            return `${this.name} (${this.team})`;
-        }
-    }
-    Avenger.aveAge = 35;
-    const antman = new Avenger('Antman', 'Capitan', 'Scott Lang');
+    };
 })();
 (() => {
-    class Apocalisis {
-        constructor(name) {
-            this.name = name;
-        }
-        static callApocalisis() {
-            if (!Apocalisis.instance) {
-                Apocalisis.instance = new Apocalisis('Soy Apocalisis... la única');
-            }
-            return Apocalisis.instance;
-        }
-        changeName(newName) {
-            this.name = newName;
+    class Mutant {
+        mutantPower(id) {
+            return this.name + ' ' + this.realName;
         }
     }
-    const apocalisis1 = Apocalisis.callApocalisis();
-    const apocalisis2 = Apocalisis.callApocalisis();
-    const apocalisis3 = Apocalisis.callApocalisis();
-    apocalisis1.changeName('Dayana');
-    console.log(apocalisis1);
+})();
+(() => {
+    const client = {
+        name: 'Milvia',
+        age: 33,
+        address: {
+            id: 123,
+            zip: 'KFL SUD',
+            city: 'Medellin'
+        },
+        getFullAddress(id) {
+            return this.address.city;
+        }
+    };
+    const client2 = {
+        name: 'Dayana',
+        age: 18,
+        address: {
+            id: 123,
+            zip: 'KFL SUD',
+            city: 'Medellin'
+        },
+        getFullAddress(id) {
+            return this.address.city;
+        }
+    };
+})();
+(() => {
+    let addNumbersFuncion;
+    addNumbersFuncion = (a, b) => a * b;
+    console.log(addNumbersFuncion(30, 15));
+})();
+(() => {
+    const conducirBatimovil = (auto) => {
+        auto.encender = true;
+        auto.velocidadMaxima = 100;
+        auto.acelear();
+    };
+    const batimovil = {
+        encender: false,
+        velocidadMaxima: 0,
+        acelear() {
+            console.log("...... gogogo!!!");
+        }
+    };
+    const guason = {
+        reir: true,
+        comer: true,
+        llorar: false
+    };
+    const reir = (guason) => {
+        if (guason.reir) {
+            console.log("JAJAJAJA");
+        }
+    };
+    const ciudadGotica = (ciudadanos) => {
+        return ciudadanos.length;
+    };
+    class Persona {
+        imprimirBio() {
+        }
+    }
 })();
 //# sourceMappingURL=main.js.map
