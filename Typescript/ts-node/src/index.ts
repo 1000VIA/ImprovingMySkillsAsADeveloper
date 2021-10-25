@@ -1,18 +1,13 @@
-import { Hero } from "./classes/Hero";
-// import * as HeroClasses from "./classes/Hero";
-// import  powers  from "./data/powers";
+import { Pokemon } from "./decorators/pokemon";
 
+const charmander = new Pokemon('charmander');
 
+// (Pokemon.prototype as any ).custonName = 'pokachu'
 
+// console.log(charmander.savePkemonToDB(50));
 
-// const iroman = new SuperHeroe('Iroman', 12345, 32)
-const iroman = new Hero('Iroman', 10, 32)
+// charmander.savePkemonToDB(3)
 
-console.log( iroman );
-console.log( iroman.power );
+charmander.publiApi = 'https://fernando-herrera.com';
 
-
-
-
-
-
+console.log( charmander )
